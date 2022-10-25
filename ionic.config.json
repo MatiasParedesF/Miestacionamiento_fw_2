@@ -1,0 +1,7 @@
+{
+  "name": "Miestacionamiento_fw_2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
