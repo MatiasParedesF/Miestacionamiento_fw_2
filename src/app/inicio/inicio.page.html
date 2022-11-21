@@ -1,0 +1,50 @@
+<ion-header>
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          <ion-avatar><img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" sizes="small"/></ion-avatar>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-button expand="full" fill="clear">Administrar reservas</ion-button>
+      <ion-button expand="full" fill="clear">Ajustes</ion-button>
+      <ion-button expand="full" fill="clear">Historial</ion-button>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu principal</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-content>
+  </div>
+  
+  <ion-content>
+    <div id="map"></div>
+  </ion-content>
+  
+
+
+
+
+
+
+</ion-content>

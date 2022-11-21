@@ -1,7 +1,10 @@
 {
   "name": "Miestacionamiento_fw_2",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular"
 }
