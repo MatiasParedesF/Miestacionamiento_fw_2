@@ -9,4 +9,15 @@ ion-content {
             opacity: 1;
         }
     }
+
+    .list-group{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+      }
+    li{
+        cursor: pointer;
+    }
+
 }

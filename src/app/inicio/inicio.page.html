@@ -39,6 +39,16 @@
   
   <ion-content>
     <div id="map"></div>
+    <ul class="list-group">
+      <li class="list-group-item" 
+          *ngFor="let estacionamiento of estacionamientos; let i=index" 
+          (click)="irEstacionamiento(estacionamiento)">
+          Estacionamiento {{i+1}}
+      </li>
+      <li ion-button class="list-group-item list-group-item-info" (click)="crearEstacionamiento()">
+        + Agregar
+    </li>
+  </ul>
   </ion-content>
   
 

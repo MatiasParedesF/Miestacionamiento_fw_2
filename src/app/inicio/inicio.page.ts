@@ -1,7 +1,9 @@
 
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { CoordInfo } from '../modelos/coord.info';
 import { Marker } from '../modelos/marker.model';
+import { Parking } from '../modelos/parking.model';
+import { ParkingService } from '../services/parking.service';
 
 declare var google;
 
@@ -10,7 +12,7 @@ declare var google;
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
-export class InicioPage implements OnInit {
+export class InicioPage implements AfterViewInit {
 
   map = null;
   marker: Marker = {
@@ -21,11 +23,16 @@ export class InicioPage implements OnInit {
     title: "Sambil"
   };
   coordInfo: CoordInfo = null;
+  estacionamientos: Parking[]=[];
+  marcadores:Marker[]=[];
 
-  constructor() { }
-
-  ngOnInit() {;
+  constructor(private parkingService:ParkingService) { }
+  ngAfterViewInit(): void {
+    this.obtenerEstacionamientos();
     this.loadMap();
+  }
+
+  ngOnInit() {
   }
 
   loadMap() {
@@ -38,7 +45,8 @@ export class InicioPage implements OnInit {
 
     this.map = new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 15
+      zoom: 15,
+      disableDefaultUI: true,
     });
   
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
@@ -54,6 +62,49 @@ export class InicioPage implements OnInit {
       title: marker.title
     });
 
+  }
+
+  crearEstacionamiento(){
+
+    this.parkingService.obtenerEstacionamientos().subscribe(
+      (estacionamientos)=>{
+        this.estacionamientos=estacionamientos
+      },
+      (err)=>{
+        console.log(err);
+      })
+  }
+
+  irEstacionamiento(estacionamiento:Parking){
+    google.maps.event
+  }
+
+  obtenerEstacionamientos(){
+
+
+    this.parkingService.obtenerEstacionamientos().subscribe(
+      (estacionamientos)=>{
+        this.estacionamientos=estacionamientos;
+
+        this.estacionamientos.forEach(parking => {
+          this.marcadores.push({
+            position: {
+              lat: Number(parking.latitud),
+              lng: Number(parking.longitud)
+            },
+            title: ''
+          })
+        });
+        this.marcadores.forEach(m=>{
+          console.log(m);
+          this.addMarker(m);
+        });
+
+      },
+      (err)=>{
+        console.log(err);
+      }
+    );
   }
 
 

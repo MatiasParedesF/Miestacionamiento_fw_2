@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "direaccion": "Av. Américo Vespucio 1501, Cerrillos, Región Metropolitana",
+        "ancho": "2.4",
+        "largo": "3.2",
+        "alto": "3",
+        "latitud": "-33.514735370517705",
+        "longitud": "-70.71846514766527",
+        "descripcion": "Estacionamiento amplio",
+        "valorHora": 7000
+    },
+    {
+        "id": 2,
+        "direaccion": "Av. Américo Vespucio 1501, 9220213 Santiago, Cerrillos, Región Metropolitana",
+        "ancho": "2",
+        "largo": "2.8",
+        "alto": "3",
+        "latitud": "-33.51703380420515",
+        "longitud": "-70.7172990577681",
+        "descripcion": "Estacionamiento cercano al mall",
+        "valorHora": 3000
+    }
+]
