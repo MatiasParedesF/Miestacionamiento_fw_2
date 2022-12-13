@@ -1,6 +1,6 @@
 export interface Parking {
     id?:          number;
-    direaccion?:  string;
+    direccion?:  string;
     ancho?:       string;
     largo?:       string;
     alto?:        string;
@@ -8,4 +8,5 @@ export interface Parking {
     longitud?:    string;
     descripcion?: string;
     valorHora?:   number;
+    nombre?:      string;
 }

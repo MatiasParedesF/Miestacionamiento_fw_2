@@ -49,6 +49,8 @@
         + Agregar
     </li>
   </ul>
+
+  <app-formulario-estacionamiento *ngIf="estadoFormParking" (miFormularioEvent)="guardar($event)" (cierreFormularioEvent)="cerrar($event)"></app-formulario-estacionamiento>
   </ion-content>
   
 

@@ -1,0 +1,168 @@
+<form class="formulario col-6" (ngSubmit)="guardar()" [formGroup]="miFormulario" autocomplete="off">
+  <!-- Nombre -->
+  <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Titulo</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Titulo del marcador"
+                 formControlName="nombre">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('nombre')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Dirección</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="La calle 123, Comuna"
+                 formControlName="direccion">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('direccion')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Ciudad</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Ciudad"
+                 formControlName="ciudad">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('ciudad')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Región</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Región"
+                 formControlName="region"
+                 value="Metropolitana">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('region')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Ancho</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Ancho del estacionamiento"
+                 formControlName="ancho"
+                 value="3">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('ancho')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Largo</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Largo del estacionamiento"
+                 formControlName="largo"
+                 value="3">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('largo')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">alto</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Alto del estacionamiento"
+                 formControlName="alto"
+                 value="3">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('alto')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Latitud</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="latitud de la ubicación"
+                 formControlName="latitud">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('latitud')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+    <!-- Nombre -->
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Longitud</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Longitud de la ubicación"
+                 formControlName="longitud">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('nombre')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+
+      <!-- Nombre -->
+    <div class="mb-3 row">
+        <label class="col-sm-3  col-form-label">Valor</label>
+        <div class="col-sm-9">
+            <input class="form-control"
+                   placeholder="Valor por hora"
+                   formControlName="valorHora"
+                   value="7000">
+            <span   class="form-text text-danger"
+                    *ngIf="campoEsValido('valorHora')">
+                Este campo es obligatorio
+            </span>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+      <label class="col-sm-3  col-form-label">Descripción</label>
+      <div class="col-sm-9">
+          <input class="form-control"
+                 placeholder="Descripción del estacionamiento"
+                 formControlName="descripcion"
+                 value="Es un precio economico">
+          <span   class="form-text text-danger"
+                  *ngIf="campoEsValido('descripcion')">
+              Este campo es obligatorio
+          </span>
+      </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-sm-6">
+        <button (click)="cerrar()"
+                class="btn btn-danger float">
+                Cerrar
+        </button>
+    </div>
+      <div class="col-sm-6">
+          <button type="submit"
+                  class="btn btn-primary float-end">
+                  Guardar
+              </button>
+      </div>
+  </div>
